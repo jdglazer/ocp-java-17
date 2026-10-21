@@ -3,7 +3,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.function.Supplier;
 
-public class PracticeIOBaseFunctions {
+public class PracticeInputStreamBaseFunctions {
     /*
         Practice these:
         ---------------
@@ -108,9 +108,9 @@ public class PracticeIOBaseFunctions {
     }
 
     public static void main(String...args) {
-        var practiceIOBaseFunctions = new PracticeIOBaseFunctions();
-        practiceIOBaseFunctions.readBytesFromFile(practiceIOBaseFunctions::readBytesFromFileOneByOne, "readBytesFromFileOneByOne()");
-        practiceIOBaseFunctions.readBytesFromFile(practiceIOBaseFunctions::readBytesFromFileInChunks, "readBytesFromFileInChunks()");
-        practiceIOBaseFunctions.readBytesFromFile(practiceIOBaseFunctions::readAllBytesFromFile, "readAllBytesFromFile()");
+        var practiceInputStreamBaseFunctions = new PracticeInputStreamBaseFunctions();
+        practiceInputStreamBaseFunctions.readBytesFromFile(practiceInputStreamBaseFunctions::readBytesFromFileOneByOne, "readBytesFromFileOneByOne()");
+        practiceInputStreamBaseFunctions.readBytesFromFile(practiceInputStreamBaseFunctions::readBytesFromFileInChunks, "readBytesFromFileInChunks()");
+        practiceInputStreamBaseFunctions.readBytesFromFile(practiceInputStreamBaseFunctions::readAllBytesFromFile, "readAllBytesFromFile()");
     }
 }
