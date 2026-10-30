@@ -1,0 +1,9 @@
+<root>
+  <people>
+     <person>
+      <name>Joshua Glazer</name>
+      <age>34</age>
+      <nationality>Candada</nationality>
+     </person>
+  </people>
+</root>
