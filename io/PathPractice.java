@@ -43,11 +43,31 @@ public class PathPractice {
         System.out.println("normalize(): " + p.normalize());
     }
 
+    void relativizeAndResolve() {
+        /**
+           path1.relativize(path2); // translation is relativize path2 using path1 as to root path
+        */
+        Path p1 = Path.of("/home/josh/Documents/test.txt");
+        Path p2 = Path.of("/home/josh");
+        Path p3 = Path.of("Documents/test.txt");
+        
+        System.out.print("Relativize\n---------\nfrom path 1 to path 2: ");
+        System.out.println(p1.relativize(p2).toString());
+        System.out.println("path 2 to path 1: " + p2.relativize(p1).toString());
+
+        System.out.print("Resolve:\n--------\n");
+        System.out.println("from path2 to path3: " + p2.resolve(p3)); // /home/josh/Documents/test.txt
+        System.out.println("from path3 to path2: " + p3.resolve(p2)); // /home/josh it can't resolve the given path against current so it just returns it as is, it's already a root path
+    }
+    
+    void 
+
     public static void main(String...args) {
        var pathPractice = new PathPractice();
        pathPractice.iterateOverPath();
        pathPractice.showBasicFunctionsOfPath(myRelativePath);
        pathPractice.showBasicFunctionsOfPath(myFilePath);
        pathPractice.showBasicFunctionsOfPath(linuxAbsolutePath);
+       pathPractice.relativizeAndResolve();
     }
 }
